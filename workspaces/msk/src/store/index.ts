@@ -1,0 +1,1 @@
+export { menuAtom } from './contents';

@@ -1,0 +1,14 @@
+{
+  "name": "menu-simple-kit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "workspaces":[
+    "./workspaces/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w msk"
+  },
+  "author": "",
+  "license": "ISC"
+}
