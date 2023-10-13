@@ -55,6 +55,12 @@
             ],
             "@theme": [
                 "src/theme"
+            ],
+            "@test": [
+                "src/test"
+            ],
+            "@contents": [
+                "src/contents"
             ]
         }
     },
