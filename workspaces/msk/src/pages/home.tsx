@@ -35,30 +35,12 @@ export const Home = (props: { socket: any }) => {
 					sx={{
 						position: 'fixed',
 						top: 'auto',
-						bottom: 70,
+						bottom: 90,
+						right: 70,
 						zIndex: 99,
 					}}
 				>
-					<IconButton
-						onClick={() => {
-							if (disp === 0) {
-								setDisp(1);
-							} else {
-								setDisp(0);
-							}
-						}}
-						sx={{
-							backgroundColor: 'white',
-							boxShadow: '4px 4px 3px rgba(0, 0, 0, .4)',
-						}}
-					>
-						{disp === 1 ? (
-							<GridViewSharp sx={{ color: 'primary.main' }} />
-						) : (
-							<List sx={{ color: 'primary.main' }} />
-						)}
-					</IconButton>
-					<Box sx={{ display: 'block', paddingTop: '.25rem' }} />
+					{/* <Box sx={{ display: 'block', paddingTop: '.25rem' }} /> */}
 					<Link href="#">
 						<IconButton
 							sx={{
@@ -70,6 +52,26 @@ export const Home = (props: { socket: any }) => {
 						</IconButton>
 					</Link>
 				</Box>
+
+				<IconButton
+					onClick={() => {
+						if (disp === 0) {
+							setDisp(1);
+						} else {
+							setDisp(0);
+						}
+					}}
+					sx={{
+						backgroundColor: 'white',
+						boxShadow: '4px 4px 3px rgba(0, 0, 0, .4)',
+					}}
+				>
+					{disp === 1 ? (
+						<GridViewSharp sx={{ color: 'primary.main' }} />
+					) : (
+						<List sx={{ color: 'primary.main' }} />
+					)}
+				</IconButton>
 				{Object.keys(menu).map((value, index) => {
 					return (
 						<Menu
