@@ -52,6 +52,15 @@
             ],
             "@logo": [
                 "src/configs/logo"
+            ],
+            "@theme": [
+                "src/theme"
+            ],
+            "@test": [
+                "src/test"
+            ],
+            "@contents": [
+                "src/contents"
             ]
         }
     },

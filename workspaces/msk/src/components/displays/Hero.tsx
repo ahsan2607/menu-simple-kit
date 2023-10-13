@@ -37,6 +37,7 @@ export const Hero = (props: HeroProps) => {
 	if (image)
 		return (
 			<Box
+				id="#"
 				sx={{
 					backgroundColor: props.backgroundColor ?? 'grey.800',
 					color: props.color ?? 'white',
@@ -50,6 +51,7 @@ export const Hero = (props: HeroProps) => {
 					backgroundRepeat: 'no-repeat',
 					backgroundPosition: props.backgroundPosition ?? 'center',
 					backgroundImage: `url(${props.backgroundImage})`,
+					padding: '80px 0 80px 0',
 				}}
 			>
 				<Image
@@ -60,7 +62,7 @@ export const Hero = (props: HeroProps) => {
 					alt={`${settings.namaRestoran}-logo`}
 				/>
 				<Box>
-					<Typography component="h1" variant="h1" align="center">
+					<Typography component="h2" variant="h1" align="center">
 						{settings.namaRestoran}
 					</Typography>
 					<Typography component="h2" variant="h3" align="center">
