@@ -1,12 +1,13 @@
-import { IconButton, Box, Link } from '@mui/material';
+import { IconButton, Box } from '@mui/material';
 import { GridViewSharp } from '@mui/icons-material';
 import { List } from '@mui/icons-material';
-import { ArrowDropUp } from '@mui/icons-material';
-import { useState } from 'react';
-import { BaseLayout } from '@layouts';
 import { useAtomValue } from 'jotai';
+import { useState } from 'react';
+// import axios from 'axios';
+import { BaseLayout } from '@layouts';
 import { menuAtom } from '@store';
-import { Menu } from '@components';
+import { Menu, UptoTop } from '@components';
+import { jsonServer } from '@api';
 
 export default function Home() {
 	const menu = useAtomValue(menuAtom);
@@ -15,34 +16,10 @@ export default function Home() {
 	if (menu) {
 		return (
 			<BaseLayout>
-				<Box
-					sx={{
-						position: 'fixed',
-						top: 'auto',
-						right: 70,
-						bottom: 90,
-						zIndex: 99,
-					}}
-				>
-					<Box sx={{ display: 'block', paddingTop: '.25rem' }} />
-					<Link href="#">
-						<IconButton
-							sx={{
-								backgroundColor: 'white',
-								boxShadow: '4px 4px 3px rgba(0, 0, 0, .4)',
-							}}
-						>
-							<ArrowDropUp sx={{ color: 'primary.main' }} />
-						</IconButton>
-					</Link>
-				</Box>
+				<UptoTop />
 				<IconButton
 					onClick={() => {
-						if (disp === 0) {
-							setDisp(1);
-						} else {
-							setDisp(0);
-						}
+						disp === 0 ? setDisp(1) : setDisp(0);
 					}}
 					sx={{
 						backgroundColor: 'primary.main',

@@ -16,6 +16,7 @@
 		"@mui/icons-material": "^5.11.9",
 		"@mui/material": "^5.11.10",
 		"@types/mui-image": "^1.0.1",
+		"axios": "^1.5.1",
 		"jotai": "^2.0.3",
 		"mui-image": "^1.0.7",
 		"react": "^18.2.0",
